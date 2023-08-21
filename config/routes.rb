@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'registers#index', as: "signup"
   post '/signup', to: 'registers#create'
 
-  root "registers#index"
+  root "home#index"
   # root "sessions#new"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
