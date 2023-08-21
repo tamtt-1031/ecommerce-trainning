@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get '/signin', to: 'sessions#new', as: 'sessions'
-  post '/signin', to: 'sessions#create'
-  delete '/signin', to: 'sessions#destroy'
+  get "/signin", to: "sessions#new", as: "sessions"
+  post "/signin", to: "sessions#create"
+  delete "/signin", to: "sessions#destroy"
 
-  get '/signup', to: 'registers#index', as: "signup"
-  post '/signup', to: 'registers#create'
+  get "/signup", to: "registers#index", as: "signup"
+  post "/signup", to: "registers#create"
 
   root "home#index"
   # root "sessions#new"
