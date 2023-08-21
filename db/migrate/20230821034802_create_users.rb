@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :email
       t.string :password_digest
-      t.boolean :is_enbale
+      t.boolean :is_enable, default: true
       t.string :role
 
       t.timestamps

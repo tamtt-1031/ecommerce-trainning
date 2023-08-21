@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   delete '/signin', to: 'sessions#destroy'
 
-  get '/singup', to: 'registers#index'
+  get '/signup', to: 'registers#index', as: "signup"
   post '/signup', to: 'registers#create'
 
-  root "sessions#new"
+  root "registers#index"
+  # root "sessions#new"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
