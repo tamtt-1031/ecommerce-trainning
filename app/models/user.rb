@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-  
+
   has_many :orders
   has_many :order_items, through: :orders
 
@@ -11,4 +11,18 @@ class User < ApplicationRecord
 
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+
+  before_save :default_value
+
+  # def is_enable=(value)
+  #   self.is_enable = value
+  # end
+
+  private
+
+  # set role = User is default
+  def default_value
+    self.role ||= "User" 
+
+  end
 end

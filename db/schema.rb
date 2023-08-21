@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2023_08_21_035222) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.boolean "is_enbale"
+    t.boolean "is_enable", default: true
     t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
