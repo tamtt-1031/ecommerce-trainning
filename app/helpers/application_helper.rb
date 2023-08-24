@@ -1,6 +1,8 @@
 module ApplicationHelper
+  include Pagy::Frontend
+  
   def full_title(page_title)
-    base_title = t("base_title")
+    base_title = current_user&.admin? ? t("title.admin") : t("title.user")
     page_title.empty? ? base_title : "#{base_title} | #{page_title}"
   end
 

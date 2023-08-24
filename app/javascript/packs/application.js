@@ -6,6 +6,9 @@ import "bootstrap/dist/js/bootstrap"
 import "bootstrap/dist/css/bootstrap"
 import "stylesheets/application"
 
+require("@rails/actiontext")
+require("trix")
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
